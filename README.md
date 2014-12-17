@@ -50,22 +50,23 @@ h5之移动端坑点
       }, false);
       
     
- 尝试使用后, 触摸移动点可以禁用了，但是如果直接一个点滑动很长距离，依然是有问题的。                   
- 所以最后
- 解决办法 ：
- 默认样式
- html，body｛
+  尝试使用后, 触摸移动点可以禁用了，但是如果直接一个点滑动很长距离，依然是有问题的。 
+ 
+  所以最后
+  解决办法 ：
+  默认样式
+  html，body｛
      overflow：auto；//避免首次弹窗跳动
      height:100%; //  使webkit 内核浏览器 生效
- ｝
- 触发弹窗时，使overflow纵截断
- html，body｛
+  ｝
+  触发弹窗时，使overflow纵截断
+  html，body｛
      overflow-y:hidden；
   ｝
-弹窗消失时，使overflow恢复默认；
-html，body｛
+  弹窗消失时，使overflow恢复默认；
+  html，body｛
      overflow-y:auto；
   ｝
-弹窗
+
 
  
